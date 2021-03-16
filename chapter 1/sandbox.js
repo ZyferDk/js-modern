@@ -1,32 +1,17 @@
-// object literals
+// Math object
 
-let user = {
-    name: 'crystal',
-    age: 30,
-    email: 'crystal@thenetninja.co.uk',
-    location: 'berlin',
-    blogs: [
-        {title: 'why mac & cheese rules', likes: 30},
-        {title: '10 things to make with marmite', likes: 50}
-    ],
-    login: () => console.log('the user logged in'),
-    logout: (username) => {
-        const days = new Date();
-        const h = days.getHours();
-        const m = days.getMinutes();
-        const s = days.getSeconds();
-        let time = `${h}:${m}:${s}`
+console.log(Math);
 
-        console.log(`
-        the ${username} logged out
-        latest ${time}
-        `);
-    },
+const area = 4.8;
 
-    logBlogs() {
-        this.blogs.forEach(blog => console.log(`${blog.title} punya ${blog.likes}`));
-    }
+// console.log(Math.random(area));
+// console.log(Math.floor(area));
+// console.log(Math.ceil(area));
+// console.log(Math.trunc(area));
 
-}
+// random numbers
 
-user.logBlogs();
+const random = Math.random();
+
+// console.log(random);
+console.log(Math.round(random * 2));
