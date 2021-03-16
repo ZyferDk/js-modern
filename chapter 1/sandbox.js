@@ -1,17 +1,16 @@
-// Math object
+// const para = document.querySelector('p');
+// const para = document.querySelector('.error');
+const para = document.querySelector('div.error');
 
-console.log(Math);
 
-const area = 4.8;
+// query multiple elements at once
+const paras = document.querySelectorAll('p');
+const errors = document.querySelectorAll('.error');
 
-// console.log(Math.random(area));
-// console.log(Math.floor(area));
-// console.log(Math.ceil(area));
-// console.log(Math.trunc(area));
+const tags = document.getElementsByTagName('p')
+const kelas = document.getElementsByClassName('error')
 
-// random numbers
+const title = document.getElementById('page-title');
 
-const random = Math.random();
-
-// console.log(random);
-console.log(Math.round(random * 2));
+console.log(title);
+console.log(paras[1], errors[0]);
