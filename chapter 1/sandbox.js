@@ -1,16 +1,26 @@
-// const para = document.querySelector('p');
-// const para = document.querySelector('.error');
-const para = document.querySelector('div.error');
+// const content = document.querySelector('p');
 
-// console.log(para);
+// console.log(content.classList);
+// content.classList.add('error');
+// content.classList.remove('success');
 
-// query multiple elements at once
 const paras = document.querySelectorAll('p');
-const errors = document.querySelectorAll('.error');
+console.log(paras.classList);
+paras.forEach(p => {
+    if (p.textContent.includes('error')) {
+        p.classList.add('error');
+    } else if (p.textContent.includes('success')) {
+        p.classList.add('success');
+    }
+});
 
-console.log(para.getAttribute('class'))
-data = para.setAttribute('class', 'ajidk')
-console.log(data);
+const div = document.querySelectorAll('h4');
 
-// console.log(paras, errors);
-// console.log(paras[1], errors[0]);
+div.forEach(h4 => {
+    if (h4.textContent.includes('adk')) {
+        h4.classList.add('success');
+    } else if(h4.textContent.includes('success')) {
+        h4.classList.add('error');
+    }
+    console.log(h4.classList);
+})
